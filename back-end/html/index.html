@@ -1,0 +1,26 @@
+<html>
+    <header>
+        <title>QRCODE</title>
+        <meta charset="utf-8"/>
+    </header>
+    <body>
+        <form id="g" action="/qrcode" method="get" style="">
+            <input name="content" value="" size=100 /><br />
+            <input type="submit" value="generator"/>
+        </form>
+        <div style="margin:0 auto;">
+            <div id="result"></div>
+        </div>
+    </body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('form#g').submit(function(){
+            var content = $('input[name=content').val();
+            $('div#result').html('<img src="/qrcode?content='+content+'"/>');
+            return false;
+        });
+    });
+</script>

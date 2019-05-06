@@ -1,0 +1,11 @@
+version: "3"
+services:
+  back-end:
+    restart: "always"
+    build: ./back-end
+    ports:
+      - "8012:3000"
+    volumes:
+      - "./back-end/html:/html:rw"
+    environment:
+      PORT: "3000"
