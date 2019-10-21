@@ -9,6 +9,13 @@ services:
       - "./back-end/html:/html:rw"
     environment:
       PORT: "3000"
+    networks:
+      - "mmfei_network_frontend"
+      - "mmfei_network_backend"
 networks:
   mmfei_network_frontend:
+    external:
+      name: openresty_dockerfile_mmfei_network_backend
   mmfei_network_backend:
+    external:
+      name: openresty_dockerfile_mmfei_network_frontend
