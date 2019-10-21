@@ -9,3 +9,6 @@ services:
       - "./back-end/html:/html:rw"
     environment:
       PORT: "3000"
+networks:
+  mmfei_network_frontend:
+  mmfei_network_backend:
