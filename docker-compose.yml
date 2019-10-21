@@ -1,6 +1,6 @@
 version: "3"
 services:
-  back-end:
+  qrcodeapp:
     restart: "always"
     build: ./back-end
     ports:
