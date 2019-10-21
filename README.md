@@ -9,3 +9,6 @@ Implement QR Code Generator in Docker with Gin framework
 ## Generate your own QR code
 Use your browser with the below url, `content` is the URL you want to generate
 `http://localhost:9000/qrcode\?content=https://github.com/NeroCube`
+
+## Generate your own QR code on browsers:
+`http://localhost/html`
